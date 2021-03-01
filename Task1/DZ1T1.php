@@ -13,23 +13,16 @@ $arrayOfCars = [
     'Chevrolet' => 'North America',
 ];
 
-foreach ($arrayOfCars as $k => $v) {
-    $continent[$v][] = $k;
+$continent = [];
+
+foreach ($arrayOfCars as $model => $cont) {
+    $continent[$cont][] = $model;
 }
 
-//print_r($continent);
 
-foreach ($continent as $k => $v) {
-    foreach ($v as $ik => $v2) {
-        echo "[$k] = $v2 \n";
+foreach ($continent as $cont => $model) {
+    foreach ($model as $models) {
+        echo "[$cont] = $models \n";
     }
 }
 
-/*
-function test_print($item2, $key)
-{
-    echo "$key. $item2\n";
-}
-
-array_walk($continent, 'test_print');
-*/

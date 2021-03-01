@@ -19,10 +19,10 @@ if ($argv[1] == 'ПП') {
 } elseif ($argv[1] == 'ЗЛ') {
     $arrayOfDoors['ЗЛ'] = 'opened';
 } elseif ($argv[1] == 'Unlock') {
-    foreach ($arrayOfDoors as $k => $v) {
-        $arrayOfDoors[$k] = 'opened';
-        $arrayOfDoors['Unlock'] = 'Activated';
+    foreach ($arrayOfDoors as $argument => $state) {
+        $arrayOfDoors[$argument] = 'opened';
     }
+    $arrayOfDoors['Unlock'] = 'Activated';
 } else {
     echo "Ошибка: введите наименование двери в формате: ПП, ПЛ, ЗП, ЗЛ \n
     Или разблокируйте все двери функцией Unlock \n";
