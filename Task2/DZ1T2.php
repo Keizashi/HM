@@ -1,11 +1,12 @@
 <?php
 
-var_dump($argv);
-
-function charCount($text, $symbol)
+function newCharCount($input)
 {
-    return substr_count($text, $symbol);
+    $text = $input;
+
+    foreach (count_chars($text, 1) as $i => $val) {
+        echo "\"", chr($i), "\" встречается в строке $val раз(а).\n";
+    }
 }
 
-echo charCount($argv[1], $argv[2]);
-
+echo newCharCount($argv[1]);

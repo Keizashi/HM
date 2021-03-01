@@ -20,8 +20,8 @@ foreach ($arrayOfCars as $model => $cont) {
 }
 
 
-foreach ($continent as $cont => $model) {
-    foreach ($model as $models) {
+foreach ($continent as $cont => $models) {
+    foreach ($models as $model) {
         echo "[$cont] = $models \n";
     }
 }

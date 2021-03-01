@@ -1,31 +1,30 @@
 <?php
 
-var_dump($argv);
 
-$arrayOfDoors = [
-    'ПП' => 'closed',
-    'ПЛ' => 'closed',
-    'ЗП' => 'closed',
-    'ЗЛ' => 'closed',
+$doorsOpenedState = [
+    'ПП' => false,
+    'ПЛ' => false,
+    'ЗП' => false,
+    'ЗЛ' => false,
     'Unlock' => false,
 ];
 
 if ($argv[1] == 'ПП') {
-    $arrayOfDoors['ПП'] = 'opened';
+    $doorsOpenedState['ПП'] = true;
 } elseif ($argv[1] == 'ПЛ') {
-    $arrayOfDoors['ПЛ'] = 'opened';
+    $doorsOpenedState['ПЛ'] = true;
 } elseif ($argv[1] == 'ЗП') {
-    $arrayOfDoors['ЗП'] = 'opened';
+    $doorsOpenedState['ЗП'] = true;
 } elseif ($argv[1] == 'ЗЛ') {
-    $arrayOfDoors['ЗЛ'] = 'opened';
+    $doorsOpenedState['ЗЛ'] = true;
 } elseif ($argv[1] == 'Unlock') {
-    foreach ($arrayOfDoors as $argument => $state) {
-        $arrayOfDoors[$argument] = 'opened';
+    foreach ($doorsOpenedState as $argument => $state) {
+        $doorsOpenedState[$argument] = true;
     }
-    $arrayOfDoors['Unlock'] = 'Activated';
+    $doorsOpenedState['Unlock'] = true;
 } else {
     echo "Ошибка: введите наименование двери в формате: ПП, ПЛ, ЗП, ЗЛ \n
     Или разблокируйте все двери функцией Unlock \n";
 }
 
-print_r($arrayOfDoors);
+print_r($doorsOpenedState);
