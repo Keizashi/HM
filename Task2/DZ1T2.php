@@ -1,12 +1,12 @@
 <?php
 
-function newCharCount($input)
-{
-    $text = $input;
+$str = $argv[1];
+$counter = 0;
+$len = strlen($str);
 
-    foreach (count_chars($text, 1) as $i => $val) {
-        echo "\"", chr($i), "\" встречается в строке $val раз(а).\n";
+for ($i = 0; $i < $len; $i++) {
+    if ($str[$i] === $argv[2]) {
+        $counter++;
     }
 }
-
-echo newCharCount($argv[1]);
+echo 'Символ ' . $argv[2] . " встречается в строке $counter раз";

@@ -27,4 +27,4 @@ if ($argv[1] == 'ПП') {
     Или разблокируйте все двери функцией Unlock \n";
 }
 
-print_r($doorsOpenedState);
+var_export($doorsOpenedState);
