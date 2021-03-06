@@ -1,6 +1,5 @@
 <?php
 
-
 $doorsOpenedState = [
     'ПП' => false,
     'ПЛ' => false,
